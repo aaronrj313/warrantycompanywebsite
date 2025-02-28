@@ -41,12 +41,12 @@ export default function FeaturesSection() {
   return (
     <div className="relative z-20 py-10 lg:py-40 max-w-7xl mx-auto">
       <div className="px-8">
-        <h4 className="text-3xl lg:text-5xl lg:leading-tight max-w-5xl mx-auto text-center tracking-tight font-medium text-black dark:text-white">
-          You give us your trust. We will do the rest
+        <h4 className="bg-clip-text text-transparent text-center text-6xl lg:text-6xl lg:leading-tight max-w-5xl mx-auto text-center tracking-tight font-medium bg-gradient-to-b from-neutral-900 to-neutral-700 dark:from-neutral-600 dark:to-white">
+          You give us your trust. We will do the rest.
         </h4>
 
-        <p className="text-sm lg:text-base  max-w-2xl  my-4 mx-auto text-neutral-500 text-center font-normal dark:text-neutral-300">
-          Our experience spans more than 6 years in providing top-notch services, mulitple range of clients, with different backgrounds.
+        <p className="text-xl lg:text-2xl lg:text-base  max-w-2xl  my-4 mx-auto text-neutral-500 text-center font-normal dark:text-neutral-300">
+          Our experience spans more than 6 years in providing top-notch services, mulitple range of clients, with different backgrounds. We are just getting started.
         </p>
       </div>
 

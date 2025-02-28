@@ -12,7 +12,11 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        'sans-bold': ['Stevie Sans Bold', 'sans-serif'],
+      },
     },
   },
   plugins: [],
+  
 } satisfies Config;
