@@ -4,6 +4,7 @@ import FeaturesSection from "@/components/feature-section";
 import ServiceSection from "@/components/services-section";
 import { FollowingPointerDemo } from "@/components/following-pointer-demo";
 import WhatAreYouWaitingFor from "@/components/what-are-you-waiting-for";
+import { Footer } from "@/components/footer";
 
 
 export default function Home() {
@@ -31,6 +32,7 @@ export default function Home() {
           <WhatAreYouWaitingFor />
         </div>
       </section>
+      <Footer />
     </div>
   );
 }
