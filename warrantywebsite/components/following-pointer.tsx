@@ -28,8 +28,6 @@ export const FollowerPointerCard = ({
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     if (rect) {
-      const scrollX = window.scrollX
-      const scrollY = window.scrollY
       x.set(e.clientX - rect.left + scrollX)
       y.set(e.clientY - rect.top + scrollY)
     }
@@ -83,6 +81,7 @@ export const FollowPointer = ({
         top: y,
         left: x,
         pointerEvents: "none",
+        transform: "translate(-50%, -50%)"
       }}
       initial={{
         scale: 1,

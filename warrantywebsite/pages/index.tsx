@@ -3,6 +3,7 @@ import HeroSection from "@/components/hero-section";
 import FeaturesSection from "@/components/feature-section";
 import ServiceSection from "@/components/services-section";
 import { FollowingPointerDemo } from "@/components/following-pointer-demo";
+import WhatAreYouWaitingFor from "@/components/what-are-you-waiting-for";
 
 
 export default function Home() {
@@ -23,6 +24,11 @@ export default function Home() {
       <section className="relative min-h-72 pb-20 overflow-hidden bg-black">
         <div className="relative z-30">
           <FollowingPointerDemo />
+        </div>
+      </section>
+      <section className="relative min-h-64 overflow-hidden bg-black">
+        <div className="relative z-30">
+          <WhatAreYouWaitingFor />
         </div>
       </section>
     </div>
