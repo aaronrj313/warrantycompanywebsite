@@ -2,6 +2,8 @@ import Image from "next/image";
 import HeroSection from "@/components/hero-section";
 import FeaturesSection from "@/components/feature-section";
 import ServiceSection from "@/components/services-section";
+import { FollowingPointerDemo } from "@/components/following-pointer-demo";
+
 
 export default function Home() {
   return (
@@ -13,8 +15,15 @@ export default function Home() {
       <section className="bg-black">
         <FeaturesSection />
       </section>
-      <section className="bg-black">
-        <ServiceSection />
+      <section>
+        <div className="min-h-72 bg-gradient-to-b from-transparent via-neutral-900 to-black">
+          <ServiceSection />
+        </div>
+      </section>
+      <section className="relative min-h-72 pb-20 overflow-hidden bg-black">
+        <div className="relative z-30">
+          <FollowingPointerDemo />
+        </div>
       </section>
     </div>
   );
