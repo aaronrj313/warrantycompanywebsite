@@ -14,7 +14,7 @@ export default function FeaturesSection() {
   const features = [
     {
       title: "Experience over everything",
-      description: "We provide the best experience for our customers. We have a 4.9 star rating on TrustPilot.",
+      description: "We provide the best experience for our customers. We ensure that our business processes are smooth for you",
       skeleton: <SkeletonOne />,
       className: "col-span-1 lg:col-span-4 border-b lg:border-r dark:border-neutral-800",
     },
