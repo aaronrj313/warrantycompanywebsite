@@ -5,11 +5,13 @@ import ServiceSection from "@/components/services-section";
 import { FollowingPointerDemo } from "@/components/following-pointer-demo";
 import WhatAreYouWaitingFor from "@/components/what-are-you-waiting-for";
 import { Footer } from "@/components/footer";
+import { Navbar } from "@/components/navbar";
 
 
 export default function Home() {
   return (
     <div>
+      <Navbar />
       <section className="relative h-screen flex items-center justify-center">
         <HeroSection />
       </section>

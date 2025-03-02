@@ -26,7 +26,7 @@ export default function FeaturesSection() {
     },
     {
       title: "Watch our AI on YouTube",
-      description: "Whether its you or Tyler Durden, you can get to know about our product on YouTube",
+      description: "Watch our AI lesson course in youtube. ",
       skeleton: <SkeletonThree />,
       className: "col-span-1 lg:col-span-3 lg:border-r  dark:border-neutral-800",
     },

@@ -60,7 +60,7 @@ export function Footer() {
         {/* Copyright */}
         <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
           <p>&copy; {new Date().getFullYear()} Warranty App Team. All rights reserved.</p>
-          <p className="mt-2">Designed with ❤️ by Warranty App Team</p>
+          <p className="mt-2">Designed with care by Warranty App Team</p>
         </div>
       </div>
     </footer>

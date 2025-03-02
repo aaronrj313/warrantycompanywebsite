@@ -2,6 +2,7 @@
 import { ShootingStars } from "./shooting-stars"
 import { StarsBackground } from "./stars-background"
 import { FlipWords } from "./flip-words"
+import ProjectTeam from "./project-team"
 
 
 export default function HeroSection() {
@@ -46,12 +47,12 @@ export default function HeroSection() {
       <StarsBackground />
       <ShootingStars />
     </div>
-    <div className=" text-center text-xl mt-8 font-normal text-neutral-500">
+    <div className=" text-center text-xl mt-8 font-normal text-neutral-500 mb-8">
       We provide cutting-edge digital solutions to help businesses thrive in the modern world. <br/>From custom-built websites to AI-powered automation, we bring technology and innovation together to drive your success.
     </div>
+    <ProjectTeam />
 
-
-    <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 space-x-0 md:space-x-4 justify-center mt-24">
+    <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 space-x-0 md:space-x-4 justify-center mt-14">
         <button className="font-bold w-40 h-14 rounded-xl bg-black border dark:border-white border-transparent text-white text-sm transform transition-transform duration-200 hover:scale-105">
           Book us now!
         </button>
