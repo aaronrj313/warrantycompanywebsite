@@ -7,11 +7,28 @@ export function Navbar() {
   const [activeLink, setActiveLink] = useState("Home")
 
   const links = [
-    { name: "Home", path: "/" },
-    { name: "About Us", path: "/about" },
-    { name: "Services", path: "/services" },
-    { name: "Contact Us", path: "/contact" },
+    { name: "Home", path: "#hero" },
+    { name: "Services", path: "#services" },
+    { name: "About Us", path: "#about" },
+    { name: "Contact Us", path: "#contact" },
   ]
+
+  const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string, linkName: string) => {
+    e.preventDefault()
+    const targetElement = document.querySelector(targetId) as HTMLElement
+    if (targetElement) {
+      const navbarHeight = 64 // Height of fixed navbar (h-16 = 64px)
+      const targetPosition = targetElement.offsetTop - navbarHeight
+
+      window.scrollTo({
+        top: targetPosition,
+        behavior: 'smooth'
+      })
+
+      setActiveLink(linkName)
+      setIsOpen(false) // Close mobile menu if open
+    }
+  }
 
   return (
     <nav className="fixed w-full top-0 z-50 backdrop-blur-lg bg-black/80 border-b border-white/10">
@@ -26,21 +43,21 @@ export function Navbar() {
           <div className="hidden md:flex items-center space-x-8">
             <div className="flex space-x-6">
               {links.map((link) => (
-                <Link
+                <a
                   key={link.name}
                   href={link.path}
                   className={`relative px-3 py-2 text-sm font-medium transition-all ${
-                    activeLink === link.name 
+                    activeLink === link.name
                       ? "text-white"
                       : "text-gray-300 hover:text-white"
                   }`}
-                  onClick={() => setActiveLink(link.name)}
+                  onClick={(e) => handleSmoothScroll(e, link.path, link.name)}
                 >
                   {link.name}
                   {activeLink === link.name && (
                     <span className="absolute bottom-0 left-0 w-full h-px bg-white/80 animate-underline" />
                   )}
-                </Link>
+                </a>
               ))}
             </div>
           </div>
@@ -86,7 +103,7 @@ export function Navbar() {
         <div className="md:hidden absolute w-full bg-black/95 backdrop-blur-xl border-b border-white/10">
           <div className="px-4 pt-2 pb-6 space-y-4">
             {links.map((link) => (
-              <Link
+              <a
                 key={link.name}
                 href={link.path}
                 className={`block px-3 py-2 text-base font-medium ${
@@ -94,13 +111,10 @@ export function Navbar() {
                     ? "text-white"
                     : "text-gray-300 hover:text-white"
                 }`}
-                onClick={() => {
-                  setActiveLink(link.name)
-                  setIsOpen(false)
-                }}
+                onClick={(e) => handleSmoothScroll(e, link.path, link.name)}
               >
                 {link.name}
-              </Link>
+              </a>
             ))}
             <button className="w-full mt-4 px-6 py-3 border border-transparent text-base font-medium rounded-full text-white bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 transition-all">
               Book Us Now
