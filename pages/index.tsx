@@ -6,6 +6,8 @@ import { FollowingPointerDemo } from "@/components/following-pointer-demo";
 import WhatAreYouWaitingFor from "@/components/what-are-you-waiting-for";
 import { Footer } from "@/components/footer";
 import { Navbar } from "@/components/navbar";
+import AboutUsSection from "@/components/about-us-section";
+import ProjectPlans from "@/components/project-plans";
 
 
 export default function Home() {
@@ -29,6 +31,23 @@ export default function Home() {
           <FollowingPointerDemo />
         </div>
       </section>
+
+      {/* About Us Section
+      - Portfolio of all Members
+      - Introduction to all Members in the group */}
+
+      <section className="relative min-h-72 pb-20 overflow-hidden bg-black">
+        <div className="relative z-30">
+          <ProjectPlans />
+        </div>
+      </section>
+
+      <section className="relative min-h-72 pb-20 overflow-hidden bg-black">
+        <div className="relative z-30">
+          <AboutUsSection />
+        </div>
+      </section>
+
       <section className="relative min-h-64 overflow-hidden bg-black">
         <div className="relative z-30">
           <WhatAreYouWaitingFor />

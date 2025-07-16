@@ -75,7 +75,7 @@ export function FollowingPointerDemo() {
           const content = getCardContent(idx);
           
           return (
-            <div key={`card-${idx}`} className="w-full mx-auto group">
+            <div key={`card-${idx}`} className="w-full mx-auto group h-full">
               <div className="pointer-follower-wrapper h-full">
                 <FollowerPointerCard
                   title={
@@ -85,9 +85,9 @@ export function FollowingPointerDemo() {
                     />
                   }
                 >
-                  <div className="relative overflow-hidden h-full rounded-2xl transition duration-200 bg-white hover:shadow-xl border border-zinc-100">
+                  <div className=" relative overflow-hidden h-full rounded-2xl transition duration-200 bg-white hover:shadow-xl border border-zinc-100 flex flex-col">
                     {/* Image Container */}
-                    <div className="w-full aspect-video bg-gray-100 relative overflow-hidden">
+                    <div className="w-full aspect-video bg-gray-100 relative overflow-hidden flex-shrink-0">
                       <Image
                         src={content.image}
                         alt={`Case study ${idx + 1} - ${content.title}`}
@@ -98,14 +98,16 @@ export function FollowingPointerDemo() {
                     </div>
 
                     {/* Content Container */}
-                    <div className="pointer-follower-content p-4 relative bg-white">
+                    <div className="pointer-follower-content p-4 relative bg-white flex flex-col flex-grow h-80">
                       <h2 className="font-bold text-lg text-zinc-700 mb-2">
                         {content.title}
                       </h2>
-                      <p className="text-sm text-zinc-500 mb-4">
-                        {content.description}
-                      </p>
-                      <div className="flex justify-between items-center mt-4">
+                      <div className="overflow-y-auto flex-grow mb-4 pr-1 custom-scrollbar">
+                        <p className="text-sm text-zinc-500">
+                          {content.description}
+                        </p>
+                      </div>
+                      <div className="flex justify-between items-center mt-auto">
                         <span className="text-sm text-gray-500">
                           {content.date}
                         </span>
